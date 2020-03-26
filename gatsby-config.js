@@ -22,6 +22,15 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-158667528-2",
+        head: false,
+        respectDNT: false,
+        // cookieDomain: "comparenoguarantorloans.co.uk",
+      },
+    },
+    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `amfbou08dyx7`,
@@ -36,12 +45,7 @@ module.exports = {
 
         // Include GTM in development.
         // Defaults to false meaning GTM will only be loaded in production.
-        includeInDevelopment: false,
-
-        // datalayer to be set before GTM is loaded
-        // should be an object or a function that is executed in the browser
-        // Defaults to null
-        defaultDataLayer: { platform: "gatsby" },
+        includeInDevelopment: true,
       },
     },
     {
