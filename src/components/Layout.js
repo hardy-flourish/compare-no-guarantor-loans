@@ -7,6 +7,7 @@ import Cta from "./Cta"
 import CookieConsent from "react-cookie-consent"
 import { useStaticQuery, graphql } from "gatsby"
 import css from "@emotion/css"
+import { Helmet } from "react-helmet"
 export default function Layout({ children, formPage }) {
   const [menuIsOpen, setMenuIsOpen] = React.useState(false)
   const { cookies } = useStaticQuery(graphql`
@@ -24,6 +25,9 @@ export default function Layout({ children, formPage }) {
   `)
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>No Guarantor Loans</title>
+      </Helmet>
       <SideMenu {...{ menuIsOpen, setMenuIsOpen }}></SideMenu>
       <Header {...{ menuIsOpen, setMenuIsOpen }}></Header>
       {children}
