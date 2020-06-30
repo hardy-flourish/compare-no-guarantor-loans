@@ -63,7 +63,7 @@ export default function ContactForm() {
             form {
               input,
               textarea {
-                ${tw`bg-brand-gray-bg  p-4  md:mb-3  mb-4 lg:mb-0  rounded-lg w-full outline-none focus:border-brand-orange border`}
+                ${tw`bg-brand-gray-bg  p-4  md:mb-3  mb-4 lg:mb-0  rounded-lg w-full outline-none focus:border-brand-blue border`}
               }
               .col {
                 ${tw`mb-4`}
@@ -151,7 +151,7 @@ export default function ContactForm() {
                 <div className="col">
                   <button
                     type="submit"
-                    className="text-white  items-center justify-center bg-brand-blue  inline-block tracking-wide  p-2 w-48 h-12 rounded-full "
+                    className="text-white  items-center justify-center bg-brand-blue  inline-block tracking-wide  p-2 w-48 h-12 rounded-full focus:outline-none "
                   >
                     Send
                   </button>

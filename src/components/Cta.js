@@ -17,7 +17,7 @@ export default function Cta({ className, amount = 2000, term = 12 }) {
       }}
       state={{ amount, term }}
       className={
-        "text-white  items-center justify-center bg-brand-blue  inline-block tracking-wide  p-2 w-48 h-12 rounded-full " +
+        "text-white  items-center justify-center bg-brand-blue  inline-flex tracking-wide  p-2 w-48 h-12 rounded-full " +
         className
       }
     >
