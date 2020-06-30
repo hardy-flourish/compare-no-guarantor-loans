@@ -6,7 +6,7 @@ export default function Cta({ className, amount = 2000, term = 12 }) {
   return (
     <a
       href="/apply/"
-      onClick={event => {
+      onClick={(event) => {
         event.preventDefault()
         trackCustomEvent({
           category: "Form",
@@ -17,7 +17,7 @@ export default function Cta({ className, amount = 2000, term = 12 }) {
       }}
       state={{ amount, term }}
       className={
-        "text-white inline-flex items-center justify-center bg-brand-blue  inline-block tracking-wide  p-2 w-48 h-12 rounded-full " +
+        "text-white  items-center justify-center bg-brand-blue  inline-block tracking-wide  p-2 w-48 h-12 rounded-full " +
         className
       }
     >

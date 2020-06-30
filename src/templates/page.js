@@ -6,6 +6,8 @@ import Hero from "@components/Hero"
 import ValueExplainer from "@components/ValueExplainer"
 import CommonQuestions from "@components/CommonQuestions"
 import ContentComponent from "@components/Content"
+
+import ContactForm from "@components/ContactForm"
 export default function Page({ data: { heroData, VE, QA, Content } }) {
   return (
     <Layout>
@@ -17,6 +19,7 @@ export default function Page({ data: { heroData, VE, QA, Content } }) {
       {Content.main.md.html.length > 0 && (
         <ContentComponent data={Content}></ContentComponent>
       )}
+      {Content.slug && Content.slug == "contact" && <ContactForm />}
     </Layout>
   )
 }
@@ -65,6 +68,7 @@ export const query = graphql`
       website: { in: ["Compare No Guarantor Loans"] }
       contentful_id: { eq: $contentful_id }
     ) {
+      slug
       main: mainContentSection {
         md: childMarkdownRemark {
           html
